@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script type="module" src="./src/index.js"></script>
+</head>
+<body>
+    <espe-header id="header"></espe-header>
+    <div class="container">
+        <div class="layout-container">
+            <div class="content-wrapper">
+                <div class="layout-content-container">
+                    <div class="title">
+                        <p class="page-title">Mis Tareas</p>
+                    </div>
+                    <div class="tabs-section">
+                        <div class="tabs-container">
+                            <a class="tab active" href="#" id="tab-fecha">
+                                <p class="tab-text">Por Fecha</p>
+                            </a>
+                            <a class="tab" href="#" id="tab-prioridad">
+                                <p class="tab-text">Por Prioridad</p>
+                            </a>
+                        </div>
+                    </div>
+                    <task-list id="taskList" theme="dark"></task-list>
+                    <task-form id="taskForm"></task-form>
+                    <task-detail id="taskDetail"></task-detail>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
