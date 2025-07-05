@@ -60,16 +60,20 @@ class TaskList extends LitElement {
         background: var(--accent-color);
         color: white;
         border: none;
-        border-radius: 50%;
-        width: 56px;
-        height: 56px;
+        border-radius: 50px;
+        height: 40px;
         cursor: pointer;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
         transition: all 0.2s;
         display: flex;
         align-items: center;
         justify-content: center;
         z-index: 100;
+        gap: 5px;
+        padding: 0px 20px; 
+      }
+
+      .plus {
+        color: white;
       }
 
       .add-task-button:hover {
@@ -134,11 +138,11 @@ class TaskList extends LitElement {
           </div>
         `) : this._renderEmptyState()}
         
-        <button class="add-task-button" @click=${() => this._dispatchEvent('add-task-requested')} 
-                title="Agregar nueva tarea">
-          <svg width="24" height="24" viewBox="0 0 256 256">
-            <path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/>
-          </svg>
+        <button class="add-task-button" @click=${() => this._dispatchEvent('add-task-requested')}>
+            <svg class="plus" width="20" height="20" viewBox="0 0 256 256">
+              <path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/>
+            </svg>
+            <span>Agregar tarea</span>
         </button>
       </div>
     `;
