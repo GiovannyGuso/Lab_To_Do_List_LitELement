@@ -40,14 +40,13 @@ class TaskForm extends LitElement {
       }
 
       input, textarea, select {
-        width: 100%;
+        width: 95%;
         border: none;
         border-radius: 8px;
         padding: 0.75rem;
         margin-bottom: 1rem;
         background: var(--bg-tertiary);
         color: var(--text-primary);
-        font-size: 1rem;
       }
 
       textarea { min-height: 80px; }
