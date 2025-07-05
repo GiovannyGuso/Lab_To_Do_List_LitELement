@@ -34,20 +34,15 @@ class Header extends LitElement {
         gap: 16px;
       }
 
+      svg{
+        color: #fff
+      } 
+
       .logo-text {
         font-size: 18px;
         font-weight: bold;
         line-height: 1.2;
         color: #fff;
-      }
-
-      .menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        padding: 8px;
-        border-radius: 4px;
-        cursor: pointer;
       }
 
       .navigation {
@@ -87,7 +82,7 @@ class Header extends LitElement {
         border-radius: 8px;
         height: 40px;
         background-color: var(--bg-tertiary);
-        color: var(--text-primary);
+        color: #fff;
         border: none;
         cursor: pointer;
         transition: all 0.3s ease;
@@ -112,7 +107,7 @@ class Header extends LitElement {
           flex-direction: column;
           padding: 12px 16px;
         }
-        .menu-toggle { display: block; }
+
         .navigation {
           display: none;
           flex-direction: column;
@@ -143,12 +138,6 @@ class Header extends LitElement {
             </svg>
             <h2 class="logo-text">ESPE Tasks</h2>
           </div>
-        
-          <button class="menu-toggle icon-btn" @click=${this._toggleMobileMenu}>
-            <svg width="24" height="24" viewBox="0 0 256 256">
-              <path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/>
-            </svg>
-          </button>
           
           <div class="navigation ${this._mobileMenuOpen ? 'mobile-open' : ''}">
             <div class="nav-links">
@@ -170,10 +159,6 @@ class Header extends LitElement {
         </div>
       </header>
     `;
-  }
-
-  _toggleMobileMenu() {
-    this._mobileMenuOpen = !this._mobileMenuOpen;
   }
 
   _toggleTheme() {
