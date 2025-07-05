@@ -1,8 +1,8 @@
-import "./components/espe-header.js";
-import "./components/espe-task-list.js";
-import "./components/espe-task-items.js";
-import "./components/espe-task-form.js";
-import "./components/espe-task-detail.js";
+import "./components/header.js";
+import "./components/task-list.js";
+import "./components/task-items.js";
+import "./components/task-form.js";
+import "./components/task-detail.js";
 import "./components/shared-styles.js";
 import "../style/style.css";
 
